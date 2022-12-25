@@ -1,0 +1,36 @@
+.container--feature {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+
+.container--feature__col {
+    padding: 1rem;
+    /* overflow: hidden; */
+}
+
+.container--image {
+    width: 100%; /* or any custom size */
+    height: auto;
+    margin-top: 2rem;
+}
+
+.container--image img {
+    width: 100%; /* or any custom size */
+    height: auto;
+}
+
+.final h3 {
+    color: var(--clr-secondary);
+    font-size: 1rem;
+}
+
+.final h5 {
+    margin-top: 15px;
+    color: var(--clr-black);
+    font-size: 1rem;
+}
