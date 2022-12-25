@@ -36,12 +36,16 @@ const Feature = () => {
         let t0 = performance.now();
         axios
             .post(
-                "https://349a-2402-800-6294-555-75d8-176d-fccc-5a22.ap.ngrok.io/upload",
+                " https://5156-2402-800-6294-555-bd7d-cb89-6b4e-edb.ap.ngrok.io/upload",
+                formData,
                 {
-                    formData,
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
                     headers: new Headers({
                         "ngrok-skip-browser-warning": "69420",
                     }),
+                    mode: "no-cors",
                 }
             )
             .then((res, data) => {
@@ -56,27 +60,6 @@ const Feature = () => {
                 );
             });
     };
-
-    // const uploadCRNNHandler = (event) => {
-    //     event.preventDefault();
-    //     const formData = new FormData();
-    //     formData.append('file', imageFile, 'img_crnn.png');
-
-    //     let t0 = performance.now();
-    //     axios
-    //         .post('http://127.0.0.1:5000/upload', formData)
-    //         .then((res, data) => {
-    //             data = res.data;
-    //             setImagePrediction(data);
-    //             let t1 = performance.now();
-    //             console.log(data);
-    //             console.log(
-    //                 'The time LSTM & Attention took to predict the image ' +
-    //                     (t1 - t0) +
-    //                     ' milliseconds.',
-    //             );
-    //         });
-    // };
 
     return (
         <div className='container--feature'>

@@ -1,28 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { links, social } from './data';
-import classes from './Navbar.module.css';
-import logo from './favicon.png';
+import React, { useState, useRef, useEffect } from "react";
+import { links, social } from "./data";
+import classes from "./Navbar.module.css";
+import logo from "./favicon.png";
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false);
     const linksContainerRef = useRef(null);
     const linksRef = useRef(null);
-    const toggleLinks = () => {
-        setShowLinks(!showLinks);
-    };
     useEffect(() => {
         const linksHeight = linksRef.current.getBoundingClientRect().height;
         if (showLinks) {
             linksContainerRef.current.style.height = `${linksHeight}px`;
         } else {
-            linksContainerRef.current.style.height = '0px';
+            linksContainerRef.current.style.height = "0px";
         }
     }, [showLinks]);
     return (
         <nav>
             <div className={classes.navCenter}>
                 <div className={classes.navHeader}>
-                    <img src={logo} className={classes.logo} alt="logo" />
+                    <img src={logo} className={classes.logo} alt='logo' />
                 </div>
                 <div className={classes.linksContainer} ref={linksContainerRef}>
                     <ul className={classes.links} ref={linksRef}>
@@ -32,10 +29,10 @@ const Navbar = () => {
                                 <li key={id}>
                                     <a
                                         href={url}
-                                        className="scroll-link"
-                                        style={{ marginRight: '30px' }}
+                                        className='scroll-link'
+                                        style={{ marginRight: "30px" }}
                                     >
-                                        {text}{' '}
+                                        {text}{" "}
                                     </a>
                                 </li>
                             );
@@ -49,8 +46,8 @@ const Navbar = () => {
                             <li key={id}>
                                 <a
                                     href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
                                     {icon}
                                 </a>
