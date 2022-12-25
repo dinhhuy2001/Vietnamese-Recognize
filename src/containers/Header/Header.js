@@ -1,30 +1,30 @@
-import React from 'react';
-import Navbar from './Navbar/Navbar';
-import video from '../../video/writing.mp4';
+import React from "react";
+import Navbar from "./Navbar/Navbar";
+import video from "../../video/writing.mp4";
 
 const Header = () => {
     return (
         <React.Fragment>
             <Navbar />
-            <header id="trangchu">
+            <header id='trangchu'>
                 <Navbar />
-                <div class="banner">
-                    <div class="container">
+                <div class='banner'>
+                    <div class='container'>
                         <video
                             controls={false}
                             muted={true}
                             autoPlay={true}
                             loop={true}
-                            class="video-container"
+                            class='video-container'
                         >
-                            <source src={video} type="video/mp4" />
+                            <source src={video} type='video/mp4' />
                         </video>
                         <h1>Nhận dạng chữ viết tiếng Việt</h1>
-                        <p style={{ fontSize: '18px' }}>
+                        <p style={{ fontSize: "18px" }}>
                             Công cụ chuyển đổi hình ảnh thành định dạng đầu ra
                             .txt
                         </p>
-                        <a href="#" class="scroll-link btn btn-white">
+                        <a href='#trangchu' class='scroll-link btn btn-white'>
                             Tìm hiểu thêm
                         </a>
                     </div>
